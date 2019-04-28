@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1555691457 source:d:\projekty\cpp\nowy folder (2)\src\logo.cpp
+1556490735 source:d:\projekty\cpp\nowy folder (2)\src\logo.cpp
 	"Logo.h"
 
 1555691410 d:\projekty\cpp\nowy folder (2)\include\logo.h
 	<SFML/Graphics.hpp>
 
-1555691420 source:d:\projekty\cpp\nowy folder (2)\main.cpp
+1556490595 source:d:\projekty\cpp\nowy folder (2)\main.cpp
 	<SFML/Graphics.hpp>
 	<iostream>
+	<random>
 	"Logo.h"
 
 1525815618 d:\programy\sfml-2.5.0\include\sfml\graphics.hpp

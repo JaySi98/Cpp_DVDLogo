@@ -8,7 +8,7 @@ Logo::Logo(sf::Vector2u window_size)
     body.setTexture(&texture, false);
     body.setSize(sf::Vector2f(234.0f, 102.0f));
     body.setPosition((window_size.x/2)-(body.getSize().x/2), window_size.y/2-(body.getSize().y/2));
-    SetDirection(rand()%10, rand()%10);
+    SetDirection(rand()%6, rand()%6);
     speed = direction.x/100;
 }
 
