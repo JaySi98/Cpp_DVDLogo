@@ -1,14 +1,11 @@
 #include "Logo.h"
 
-Logo::Logo(sf::Vector2u window_size)
+Logo::Logo(sf::Texture* texture, sf::Vector2u window_size, int x, int y)
 {
-    if(texture.loadFromFile("DVD.png") == false)
-        return;
-
-    body.setTexture(&texture, false);
+    body.setTexture(texture, false);
     body.setSize(sf::Vector2f(234.0f, 102.0f));
-    body.setPosition((window_size.x/2)-(body.getSize().x/2), window_size.y/2-(body.getSize().y/2));
-    SetDirection(rand()%6, rand()%6);
+    body.setPosition(x, y);
+    SetDirection(SPEED, SPEED);
     speed = direction.x/100;
 }
 
@@ -57,9 +54,4 @@ void Logo::SetDirection(float x, float y)
 sf::Vector2f Logo::getDirection()
 {
     return direction;
-}
-
-void  Logo::IncreaseSpeed(float val)
-{
-    speed += val;
 }

@@ -2,12 +2,12 @@
 #define LOGO_H
 
 #include <SFML/Graphics.hpp>
+#define SPEED 5
 
 class Logo
 {
 private:
     sf::RectangleShape body; //holds the texture and the size of the logo
-    sf::Texture texture; //holds the image of the dvd logo
     float speed; //vector direction is multiplied by so it does move that fast
     sf::Vector2f direction;//
     int amount = 7; //number of available colors
@@ -17,10 +17,11 @@ private:
                                sf::Color(250,250,0,255), //yellow
                                sf::Color(137,0,250,255), //violet
                                sf::Color(250,0,250,255), //pink
-                               sf::Color(250,104,0,255)};//orange
+                               sf::Color(250,104,0,255)  //orange
+							  };
 
 public:
-    Logo(sf::Vector2u window_size);
+    Logo(sf::Texture* texture, sf::Vector2u window_size, int x, int y);
     ~Logo();
 
     //moves body by vector "direction"
@@ -37,8 +38,6 @@ public:
     sf::Vector2f getDirection();
     //sets vector "direction"
     void SetDirection(float x, float y);
-    //pretty self-explaining
-    void IncreaseSpeed(float val);
 };
 
 #endif // LOGO_H
